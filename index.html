@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEALTHY CHRISTIAN – La richesse pour la gloire de Dieu</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;color:#333}
+
+/* NAV */
+nav{
+background:#1e3a8a;
+color:white;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000
+}
+nav ul{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+list-style:none;
+justify-content:center
+}
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold
+}
+nav a:hover{color:#f59e0b}
+
+/* SECTIONS */
+.page-section{display:none;padding:60px 20px}
+.page-section.active{display:block}
+
+/* HERO */
+.hero{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:100px 20px
+}
+.hero h1{color:#f59e0b;font-size:2.8rem}
+.hero p{max-width:800px;margin:20px auto}
+
+/* CONTENU */
+.container{max-width:1000px;margin:auto}
+.card{
+background:#eff6ff;
+padding:20px;
+margin-bottom:20px;
+border-left:5px solid #f59e0b
+}
+
+/* FORM */
+form{
+max-width:600px;
+margin:auto;
+background:#eff6ff;
+padding:30px;
+border-radius:10px
+}
+input,select,textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px
+}
+button{
+background:#f59e0b;
+color:white;
+border:none;
+padding:12px;
+width:100%;
+font-size:1rem
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:2000
+}
+
+/* FOOTER */
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:30px
+}
+</style>
+</head>
+
+<body>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp"
+href="https://wa.me/22899871666?text=Bonjour%20WEALTHY%20CHRISTIAN,%20je%20souhaite%20avoir%20plus%20d’informations"
+target="_blank">💬</a>
+
+<nav>
+<ul>
+<li><a href="#" onclick="showPage('accueil')">Accueil</a></li>
+<li><a href="#" onclick="showPage('apropos')">À propos</a></li>
+<li><a href="#" onclick="showPage('formation')">Formation</a></li>
+<li><a href="#" onclick="showPage('adhesion')">Adhésion</a></li>
+<li><a href="#" onclick="showPage('contact')">Contact</a></li>
+</ul>
+</nav>
+
+<!-- ACCUEIL -->
+<section id="accueil" class="page-section active">
+<div class="hero">
+<h1>WEALTHY CHRISTIAN</h1>
+<p><em>La richesse pour la gloire de Dieu</em></p>
+<p>
+Association chrétienne dédiée à l’autonomisation économique
+et à l’entrepreneuriat biblique.
+</p>
+</div>
+</section>
+
+<!-- A PROPOS -->
+<section id="apropos" class="page-section">
+<div class="container">
+<h2>À propos</h2>
+<p>
+WEALTHY CHRISTIAN est une association chrétienne à but non lucratif
+basée à Agbélouvé (Togo).
+</p>
+</div>
+</section>
+
+<!-- FORMATION -->
+<section id="formation" class="page-section">
+<div class="container">
+<h2>Nos formations</h2>
+<div class="card">📖 Richesse biblique</div>
+<div class="card">💼 Entrepreneuriat chrétien</div>
+<div class="card">💰 Éducation financière</div>
+</div>
+</section>
+
+<!-- ADHESION -->
+<section id="adhesion" class="page-section">
+<div class="container">
+<h2>Devenir membre</h2>
+
+<form action="https://formsubmit.co/wealthychristian@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="Nouvelle adhésion - WEALTHY CHRISTIAN">
+<input type="hidden" name="_captcha" value="false">
+
+<label>Nom complet</label>
+<input type="text" name="Nom" required>
+
+<label>Téléphone</label>
+<input type="text" name="Téléphone" required>
+
+<label>Email</label>
+<input type="email" name="Email">
+
+<label>Type d’adhésion</label>
+<select name="Adhesion">
+<option>Membre simple</option>
+<option>Membre actif</option>
+<option>Partenaire</option>
+</select>
+
+<label>Message</label>
+<textarea name="Message" rows="4"></textarea>
+
+<button type="submit">Envoyer</button>
+</form>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="page-section">
+<div class="container">
+<h2>Contact</h2>
+<p>📍 Agbélouvé – Togo</p>
+<p>📞 +228 99 87 16 66</p>
+<p>✉️ wealthychristian@gmail.com</p>
+</div>
+</section>
+
+<footer>
+<p>© WEALTHY CHRISTIAN – La richesse pour la gloire de Dieu</p>
+</footer>
+
+<script>
+function showPage(id){
+document.querySelectorAll('.page-section')
+.forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+  </html>
