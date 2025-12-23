@@ -1,218 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEALTHY CHRISTIAN</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Georgia', serif;
-            background: #f8fafc;
-            color: #333;
-        }
-        /* Menu principal en haut */
-        header {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #1e3a8a, #1e40af);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header .logo-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        header .logo-title img {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-            border: 2px solid #f59e0b;
-        }
-        header .logo-title h1 {
-            font-size: 1.8rem;
-            padding: 10px 20px;
-            background: white;
-            color: #1e3a8a;
-            border-radius: 15px;
-            font-family: 'Georgia', serif;
-            letter-spacing: 2px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-        }
-        header nav {
-            margin-left: auto;
-        }
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        header nav a:hover {
-            color: #f59e0b;
-        }
-
-        /* Menu secondaire en bas (superposé) */
-        .bottom-menu {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #1e3a8a, #1e40af);
-            border-radius: 25px;
-            padding: 10px 30px;
-            display: flex;
-            gap: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 999;
-        }
-        .bottom-menu a {
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .bottom-menu a:hover {
-            color: #f59e0b;
-        }
-
-        /* Sections */
-        section {
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .hero {
-            background: linear-gradient(135deg, rgba(30,58,138,0.9), rgba(30,64,175,0.9));
-            color: white;
-            padding: 150px 20px;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 20px;
-            line-height: 1.6;
-        }
-
-        /* Formulaire */
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #cbd5e1;
-        }
-        .form-group button {
-            background: #f59e0b;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .form-group button:hover {
-            background: #d97706;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEALTHY CHRISTIAN</title>
+<style>
+  body { font-family: Georgia, serif; margin:0; background:#f8fafc; }
+  header { display:flex; align-items:center; padding:10px 20px; background:linear-gradient(135deg,#1e3a8a,#1e40af); color:white; position:sticky; top:0; z-index:1000;}
+  .logo-title { display:flex; align-items:center; gap:15px; }
+  .logo-title img { width:50px; height:50px; border-radius:10px; border:2px solid #f59e0b;}
+  .logo-title h1 { background:white; color:#1e3a8a; padding:10px 20px; border-radius:15px; font-size:1.5rem; letter-spacing:2px;}
+  header nav { margin-left:auto; }
+  header nav a { color:white; text-decoration:none; margin-left:20px; font-weight:bold; }
+  header nav a:hover { color:#f59e0b; }
+  section { display:none; padding:80px 20px; text-align:center; }
+  section.active { display:block; }
+  .bottom-menu { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,#1e3a8a,#1e40af); border-radius:25px; padding:10px 30px; display:flex; gap:20px; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+  .bottom-menu a { color:white; font-weight:bold; text-decoration:none; }
+  .bottom-menu a:hover { color:#f59e0b; }
+  .form-container { max-width:500px; margin:20px auto; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+  .form-group { margin-bottom:15px; }
+  .form-group label { display:block; margin-bottom:5px; font-weight:bold; }
+  .form-group input, .form-group textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #cbd5e1;}
+  .form-group button { background:#f59e0b; color:white; border:none; padding:10px 20px; border-radius:20px; cursor:pointer; }
+  .form-group button:hover { background:#d97706; }
+</style>
 </head>
 <body>
 
-    <!-- Menu principal en haut -->
-    <header>
-        <div class="logo-title">
-            <img src="logo.png" alt="Logo WEALTHY CHRISTIAN">
-            <h1>WEALTHY CHRISTIAN</h1>
-        </div>
-        <nav>
-            <a href="#accueil">Accueil</a>
-        </nav>
-    </header>
+<header>
+  <div class="logo-title">
+    <!-- Insérer le logo ici -->
+    <img src="logo.png" alt="Logo">
+    <h1>WEALTHY CHRISTIAN</h1>
+  </div>
+  <nav>
+    <a href="#" onclick="showSection('accueil')">Accueil</a>
+  </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section id="accueil" class="hero">
-        <h2>Bienvenue chez WEALTHY CHRISTIAN</h2>
-        <p>Nous formons et accompagnons les chrétiens dans l'autonomisation économique et la prospérité biblique.</p>
-    </section>
+<!-- SECTIONS -->
+<section id="accueil" class="active">
+  <h2>Bienvenue chez WEALTHY CHRISTIAN</h2>
+  <p>Nous formons et accompagnons les chrétiens dans l'autonomisation économique et la prospérité biblique.</p>
+</section>
 
-    <!-- À propos -->
-    <section id="apropos">
-        <h2>À propos de nous</h2>
-        <p>WEALTHY CHRISTIAN est une association chrétienne apolitique à but non lucratif basée à Agbélouvé, Togo. Notre mission est d'équiper les chrétiens avec les principes bibliques de prospérité et d'entrepreneuriat.</p>
-    </section>
+<section id="apropos">
+  <h2>À propos</h2>
+  <p>WEALTHY CHRISTIAN est une association chrétienne apolitique basée à Agbélouvé, Togo.</p>
+</section>
 
-    <!-- Formation -->
-    <section id="formation">
-        <h2>Formation</h2>
-        <p>Nos programmes de formation incluent la gestion financière biblique, la création d'entreprise chrétienne et le développement de projets à impact social.</p>
-    </section>
+<section id="formation">
+  <h2>Formation</h2>
+  <p>Gestion financière biblique, création d'entreprise chrétienne, projets à impact social.</p>
+</section>
 
-    <!-- Adhésion avec formulaire -->
-    <section id="adhesion">
-        <h2>Devenir Membre</h2>
-        <div class="form-container">
-            <form action="mailto:tonemail@example.com" method="POST" enctype="text/plain">
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" name="nom" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea name="message" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Envoyer</button>
-                </div>
-            </form>
-        </div>
-    </section>
+<section id="adhesion">
+  <h2>Devenir Membre</h2>
+  <div class="form-container">
+    <form action="mailto:tonemail@example.com" method="POST" enctype="text/plain">
+      <div class="form-group"><label>Nom</label><input type="text" name="nom" required></div>
+      <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
+      <div class="form-group"><label>Message</label><textarea name="message" required></textarea></div>
+      <div class="form-group"><button type="submit">Envoyer</button></div>
+    </form>
+  </div>
+</section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <p>WhatsApp direct : <a href="https://wa.me/22999871666" target="_blank">Envoyer un message</a></p>
-        <p>Email : tonemail@example.com</p>
-    </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>WhatsApp : <a href="https://wa.me/22999871666" target="_blank">Envoyer un message</a></p>
+  <p>Email : tonemail@example.com</p>
+</section>
 
-    <!-- Menu secondaire en bas -->
-    <div class="bottom-menu">
-        <a href="#apropos">À propos</a>
-        <a href="#formation">Formation</a>
-        <a href="#adhesion">Adhésion</a>
-        <a href="#contact">Contact</a>
-    </div>
+<!-- MENU BAS -->
+<div class="bottom-menu">
+  <a href="#" onclick="showSection('apropos')">À propos</a>
+  <a href="#" onclick="showSection('formation')">Formation</a>
+  <a href="#" onclick="showSection('adhesion')">Adhésion</a>
+  <a href="#" onclick="showSection('contact')">Contact</a>
+</div>
+
+<script>
+function showSection(id) {
+  // cacher toutes les sections
+  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  // afficher la section demandée
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
