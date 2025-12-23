@@ -2,262 +2,223 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<title>Wealthy Christian</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEALTHY CHRISTIAN</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
-    font-family: "Georgia", serif;
-    background:#0f2a55;
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#0b3c5d;
     color:white;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
-    display:grid;
-    grid-template-columns:auto 1fr auto;
+    display:flex;
     align-items:center;
-    padding:15px 25px;
-    background:#0b1f3f;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:#082f49;
 }
 
 header img{
-    width:55px;
-    border-radius:10px;
-    background:white;
-    padding:3px;
+    height:55px;
 }
 
 .site-title{
-    text-align:center;
-    font-size:1.8rem;
+    font-size:28px;
     font-weight:bold;
-    letter-spacing:3px;
     color:gold;
-    text-shadow:0 2px 5px rgba(0,0,0,0.5);
+    text-shadow:1px 1px 4px #000;
 }
 
-header nav a{
-    color:white;
+nav a{
+    margin-left:15px;
+    padding:10px 15px;
+    background:#145da0;
+    border-radius:12px;
     text-decoration:none;
-    font-weight:bold;
+    color:white;
+    font-weight:500;
 }
 
-header nav a:hover{
-    color:gold;
+nav a:hover{
+    background:gold;
+    color:#082f49;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{
     display:none;
-    padding:80px 20px;
+    padding:40px 20px;
     max-width:1000px;
     margin:auto;
-    text-align:center;
 }
 
-section.active{display:block}
-
-/* ===== TITRES ===== */
-h2{
-    color:gold;
-    margin-bottom:20px;
-    font-size:2.2rem;
+.active{
+    display:block;
 }
 
-p{
-    font-size:1.1rem;
-    line-height:1.7;
-    margin-bottom:15px;
-}
-
-/* ===== CARTES ===== */
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    margin-top:30px;
-}
-
-.card{
-    background:#12356d;
-    padding:20px;
+/* HERO IMAGE */
+.hero img{
+    width:100%;
     border-radius:20px;
+    margin:30px 0;
+}
+
+/* BOX */
+.box{
+    background:#145da0;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+/* FORMATIONS */
+.card{
+    background:#1f6fb2;
+    padding:20px;
+    border-radius:18px;
+    margin:10px 0;
     cursor:pointer;
-    transition:0.3s;
-    border:2px solid transparent;
 }
 
 .card:hover{
-    border-color:gold;
-    transform:translateY(-5px);
+    background:gold;
+    color:#082f49;
 }
 
-/* ===== IMAGE BANNIÈRE ===== */
-.banner{
-    margin-top:50px;
-}
-
-.banner img{
-    width:100%;
-    border-radius:20px;
-}
-
-/* ===== MENU BAS ===== */
-.bottom-menu{
-    position:fixed;
-    bottom:15px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#0b1f3f;
-    padding:12px 25px;
-    border-radius:30px;
-    display:flex;
-    gap:20px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.4);
-}
-
-.bottom-menu a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.bottom-menu a:hover{color:gold}
-
-/* ===== FORM ===== */
-.form-box{
-    background:#12356d;
-    padding:25px;
-    border-radius:20px;
-    max-width:500px;
-    margin:auto;
-}
-
-input,textarea{
+/* COMMENTS */
+textarea{
     width:100%;
     padding:10px;
     border-radius:10px;
     border:none;
-    margin-bottom:15px;
 }
 
 button{
-    background:gold;
+    margin-top:10px;
+    padding:10px 20px;
     border:none;
-    padding:12px 25px;
-    border-radius:25px;
+    border-radius:12px;
+    background:gold;
     font-weight:bold;
     cursor:pointer;
 }
-
-/* ===== WHATSAPP ===== */
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:90px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:22px;
-    text-decoration:none;
-}
 </style>
+
+<script>
+function showSection(id){
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png" alt="Logo">
+    <img src="images/logo.png" alt="Logo">
     <div class="site-title">WEALTHY CHRISTIAN</div>
     <nav>
-        <a href="#" onclick="showSection('accueil')">Accueil</a>
+        <a onclick="showSection('accueil')">Accueil</a>
+        <a onclick="showSection('apropos')">À propos</a>
+        <a onclick="showSection('formation')">Formation</a>
+        <a onclick="showSection('contact')">Contact</a>
     </nav>
 </header>
 
 <!-- ACCUEIL -->
 <section id="accueil" class="active">
-    <h2>Bienvenue</h2>
-    <p>Association chrétienne pour l’autonomisation économique et la prospérité biblique.</p>
+    <div class="box">
+        <h2>CONTEXTE ET JUSTIFICATION</h2>
+        <p>
+        De nombreux chrétiens vivent dans la pauvreté malgré leur foi.  
+        Plusieurs ignorent que la Bible regorge de principes puissants sur la gestion des biens,
+        le travail, l’investissement et l'entrepreneuriat.
+        Il est donc nécessaire de créer un cadre structuré où les chrétiens sont enseignés,
+        formés et accompagnés dans la compréhension et la mise en œuvre de ces principes,
+        afin de devenir financièrement autonomes et des instruments de bénédiction dans la société.
+        </p>
+    </div>
 
-    <div class="banner">
-        <img src="banner.jpg" alt="Présentation">
+    <div class="hero">
+        <img src="images/banniere.jpg" alt="Image principale">
     </div>
 </section>
 
 <!-- A PROPOS -->
 <section id="apropos">
-    <h2>À propos</h2>
-    <p>WEALTHY CHRISTIAN œuvre pour la formation, l’entrepreneuriat chrétien et l’impact social.</p>
+    <div class="box">
+        <h2>OBJECTIFS DE L’ASSOCIATION</h2>
+        <strong>Objectif général :</strong>
+        <p>
+        Former et accompagner les chrétiens à devenir financièrement prospères à travers
+        des enseignements bibliques, des formations pratiques et des projets concrets.
+        </p>
+
+        <strong>Objectifs spécifiques :</strong>
+        <ul>
+            <li>Enseigner les principes bibliques sur la richesse, le travail, l'épargne et l’investissement.</li>
+            <li>Former les membres sur les AGR, l’entrepreneuriat et la finance personnelle.</li>
+            <li>Accompagner les membres dans la création de projets générateurs de revenus.</li>
+            <li>Créer un réseau économique chrétien.</li>
+            <li>Encourager l’investissement collectif.</li>
+        </ul>
+    </div>
 </section>
 
 <!-- FORMATION -->
 <section id="formation">
-    <h2>Formations</h2>
+    <h2>Nos Formations</h2>
 
-    <div class="card-grid">
-        <div class="card" onclick="showSection('elevage')">🐖 Formation en Élevage</div>
-        <div class="card">💼 Entrepreneuriat chrétien</div>
-        <div class="card">📊 Gestion financière biblique</div>
-    </div>
+    <div class="card" onclick="showSection('porc')">Élevage de porc</div>
+    <div class="card">Élevage de volaille pondeuse</div>
+    <div class="card">Élevage caprin</div>
+    <div class="card">Élevage de lapin</div>
 </section>
 
-<!-- ELEVAGE -->
-<section id="elevage">
-    <h2>Choisir un type d’élevage</h2>
+<!-- SOUS PAGE ELEVAGE DE PORC -->
+<section id="porc">
+    <div class="box">
+        <h2>Formation : Élevage de Porc</h2>
+        <p><strong>Formateur :</strong> À renseigner</p>
+        <p><strong>Contact :</strong> 99 87 16 66</p>
 
-    <div class="card-grid">
-        <div class="card">Élevage de porcs</div>
-        <div class="card">Élevage de volailles pondeuses</div>
-        <div class="card">Élevage de caprins</div>
-        <div class="card">Élevage de lapins</div>
-        <div class="card">Élevage de bovins</div>
-        <div class="card">Élevage de poissons</div>
-    </div>
-</section>
+        <p>
+        📄 <a href="documents/elevage-porc.pdf" style="color:gold;" download>
+        Télécharger le support PDF
+        </a>
+        </p>
 
-<!-- ADHESION -->
-<section id="adhesion">
-    <h2>Adhésion</h2>
-    <div class="form-box">
-        <form action="mailto:contact@wealthychristian.com" method="POST" enctype="text/plain">
-            <input type="text" name="nom" placeholder="Nom complet" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+        <p>
+        💬 <a href="https://wa.me/22899871666" style="color:gold;">
+        Contacter le formateur sur WhatsApp
+        </a>
+        </p>
+
+        <h3>Commentaires</h3>
+        <textarea placeholder="Laissez votre commentaire ici..."></textarea>
+        <button>Envoyer</button>
+
+        <br><br>
+        <button onclick="showSection('formation')">⬅ Retour aux formations</button>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email : <strong>contact@wealthychristian.com</strong></p>
-    <p>📞 WhatsApp : <strong>99 87 16 66</strong></p>
+    <div class="box">
+        <h2>Contact</h2>
+        <p>📧 Email : <strong>wealthychristian.com</strong></p>
+        <p>📱 WhatsApp : 
+            <a href="https://wa.me/22899871666" style="color:gold;">
+            99 87 16 66
+            </a>
+        </p>
+    </div>
 </section>
-
-<!-- MENU BAS -->
-<div class="bottom-menu">
-    <a href="#" onclick="showSection('apropos')">À propos</a>
-    <a href="#" onclick="showSection('formation')">Formation</a>
-    <a href="#" onclick="showSection('adhesion')">Adhésion</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
-</div>
-
-<a class="whatsapp" href="https://wa.me/22899871666" target="_blank">💬</a>
-
-<script>
-function showSection(id){
-    document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
-}
-</script>
 
 </body>
 </html>
