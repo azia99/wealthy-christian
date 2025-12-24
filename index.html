@@ -2,72 +2,116 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>WEALTHY CHRISTIAN</title>
+<title>Wealthy Christian</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#0b3c6d;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#0b3c5d;
     color:white;
 }
+
+/* HEADER */
 header{
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:15px;
-    background:#072a4d;
+    justify-content:space-between;
+    padding:15px 30px;
+    background:#082f49;
 }
-header h1{
-    color:gold;
-    border:2px solid gold;
-    padding:8px 20px;
-    border-radius:15px;
+
+header img{
+    height:55px;
 }
-nav button{
-    margin:5px;
-    padding:10px 15px;
-    background:#0b5ed7;
-    border:none;
-    border-radius:12px;
-    color:white;
+
+.site-title{
+    font-size:28px;
     font-weight:bold;
-    cursor:pointer;
+    color:gold;
+    text-shadow:1px 1px 4px #000;
 }
-section{display:none;padding:25px;}
-.active{display:block;}
-.card{
-    background:#0e4c87;
-    padding:20px;
-    border-radius:15px;
-}
-button.link{
-    background:#198754;
+
+nav a{
+    margin-left:15px;
     padding:10px 15px;
-    border:none;
+    background:#145da0;
     border-radius:12px;
+    text-decoration:none;
     color:white;
+    font-weight:500;
     cursor:pointer;
-    margin:5px;
 }
+
+nav a:hover{
+    background:gold;
+    color:#082f49;
+}
+
+/* SECTIONS */
+section{
+    display:none;
+    padding:40px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.active{
+    display:block;
+}
+
+/* HERO IMAGE */
+.hero img{
+    width:100%;
+    border-radius:20px;
+    margin:30px 0;
+}
+
+/* BOX */
+.box{
+    background:#145da0;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+/* FORMATIONS */
+.card{
+    background:#1f6fb2;
+    padding:20px;
+    border-radius:18px;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+.card:hover{
+    background:gold;
+    color:#082f49;
+}
+
+/* COMMENTS */
 textarea{
     width:100%;
-    height:90px;
-    border-radius:10px;
     padding:10px;
+    border-radius:10px;
+    border:none;
 }
-a{color:gold;text-decoration:none;}
-footer{
-    background:#072a4d;
-    padding:20px;
-    text-align:center;
+
+button{
+    margin-top:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:12px;
+    background:gold;
+    font-weight:bold;
+    cursor:pointer;
 }
 </style>
 
 <script>
-function show(id){
-    document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+function showSection(id){
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
     document.getElementById(id).classList.add("active");
 }
 </script>
@@ -76,105 +120,122 @@ function show(id){
 <body>
 
 <header>
-<h1>WEALTHY CHRISTIAN</h1>
-<nav>
-<button onclick="show('accueil')">Accueil</button>
-<button onclick="show('formation')">Formation</button>
-<button onclick="show('contact')">Contact</button>
-</nav>
+    <img src="images/logo.png" alt="Logo">
+    <div class="site-title">WEALTHY CHRISTIAN</div>
+    <nav>
+        <a onclick="showSection('accueil')">Accueil</a>
+        <a onclick="showSection('apropos')">À propos</a>
+        <a onclick="showSection('formation')">Formation</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
 </header>
 
+<!-- ACCUEIL -->
 <section id="accueil" class="active">
-<div class="card">
-<h2>Bienvenue</h2>
-<p>Former des chrétiens financièrement autonomes selon les principes bibliques.</p>
-</div>
+    <div class="box">
+        <h2>CONTEXTE ET JUSTIFICATION</h2>
+        <p>
+        De nombreux chrétiens vivent dans la pauvreté malgré leur foi.
+        Il est nécessaire de créer un cadre structuré pour former et accompagner
+        les chrétiens vers l’autonomie financière.
+        </p>
+    </div>
+
+    <div class="hero">
+        <img src="images/banniere.jpg" alt="Image principale">
+    </div>
 </section>
 
+<!-- A PROPOS -->
+<section id="apropos">
+    <div class="box">
+        <h2>OBJECTIFS DE L’ASSOCIATION</h2>
+        <p><strong>Objectif général :</strong> Former des chrétiens financièrement autonomes.</p>
+        <ul>
+            <li>Principes bibliques</li>
+            <li>Entrepreneuriat</li>
+            <li>AGR</li>
+            <li>Investissement</li>
+            <li>Réseau chrétien</li>
+        </ul>
+    </div>
+</section>
+
+<!-- FORMATION -->
 <section id="formation">
-<div class="card">
-<h2>Formations</h2>
-<button class="link" onclick="show('entrepreneuriat')">Entrepreneuriat</button>
-<button class="link" onclick="show('investissement')">Investissement</button>
-<button class="link" onclick="show('ecommerce')">E-Commerce</button>
-<button class="link" onclick="show('design')">E-Design</button>
-</div>
+    <h2>Nos Formations</h2>
+    <div class="card" onclick="showSection('porc')">Élevage de porc</div>
+    <div class="card" onclick="showSection('pondeuse')">Élevage de volaille pondeuse</div>
+    <div class="card" onclick="showSection('caprin')">Élevage caprin</div>
+    <div class="card" onclick="showSection('lapin')">Élevage de lapin</div>
 </section>
 
-<!-- ENTREPRENEURIAT -->
-<section id="entrepreneuriat">
-<div class="card">
-<h2>Entrepreneuriat</h2>
-<button class="link" onclick="show('idee_business')">Idées de business</button>
-<button class="link" onclick="show('creation_entreprise')">Création d’entreprise</button>
-<button class="link" onclick="show('gestion')">Gestion simplifiée</button>
-<button class="link" onclick="show('leadership')">Leadership</button>
-<button class="link" onclick="show('formation')">⬅ Retour</button>
-</div>
+<!-- PORC -->
+<section id="porc">
+    <div class="box">
+        <h2>Formation : Élevage de Porc</h2>
+        <p><strong>Formateur :</strong> À renseigner</p>
+        <p><strong>Contact :</strong> 99 87 16 66</p>
+        <p><a href="documents/elevage-porc.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
+        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
+        <textarea placeholder="Pourquoi voulez-vous pratiquer ce type d’élevage ?"></textarea>
+        <button>Envoyer</button><br><br>
+        <button onclick="showSection('formation')">⬅ Retour</button>
+    </div>
 </section>
 
-<!-- TEMPLATE FORMATION DETAILLEE -->
-<section id="idee_business">
-<div class="card">
-<h3>Idées de business</h3>
-<p><b>Formateur :</b> Pasteur Kossi</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
-<p><a href="pdf/idees_business.pdf">📄 Télécharger PDF</a></p>
-<p><b>Pourquoi voulez-vous suivre cette formation ?</b></p>
-<textarea></textarea><br><br>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
-</div>
+<!-- PONDEUSE -->
+<section id="pondeuse">
+    <div class="box">
+        <h2>Formation : Volaille pondeuse</h2>
+        <p><strong>Formateur :</strong> À renseigner</p>
+        <p><strong>Contact :</strong> 99 87 16 66</p>
+        <p><a href="documents/pondeuse.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
+        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
+        <textarea placeholder="Pourquoi voulez-vous pratiquer cet élevage ?"></textarea>
+        <button>Envoyer</button><br><br>
+        <button onclick="showSection('formation')">⬅ Retour</button>
+    </div>
 </section>
 
-<section id="creation_entreprise">
-<div class="card">
-<h3>Création d’entreprise</h3>
-<p><b>Formateur :</b> M. Yao</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
-<p><a href="pdf/creation.pdf">📄 Télécharger PDF</a></p>
-<p><b>Votre motivation :</b></p>
-<textarea></textarea><br><br>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
-</div>
+<!-- CAPRIN -->
+<section id="caprin">
+    <div class="box">
+        <h2>Formation : Élevage caprin</h2>
+        <p><strong>Formateur :</strong> À renseigner</p>
+        <p><strong>Contact :</strong> 99 87 16 66</p>
+        <p><a href="documents/caprin.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
+        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
+        <textarea placeholder="Votre motivation"></textarea>
+        <button>Envoyer</button><br><br>
+        <button onclick="showSection('formation')">⬅ Retour</button>
+    </div>
 </section>
 
-<section id="gestion">
-<div class="card">
-<h3>Gestion simplifiée</h3>
-<p><b>Formateur :</b> Mme Akouvi</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
-<p><a href="pdf/gestion.pdf">📄 Télécharger PDF</a></p>
-<textarea></textarea><br><br>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
-</div>
-</section>
-
-<section id="leadership">
-<div class="card">
-<h3>Leadership</h3>
-<p><b>Formateur :</b> Pasteur John</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
-<p><a href="pdf/leadership.pdf">📄 Télécharger PDF</a></p>
-<textarea></textarea><br><br>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
-</div>
+<!-- LAPIN -->
+<section id="lapin">
+    <div class="box">
+        <h2>Formation : Élevage de lapin</h2>
+        <p><strong>Formateur :</strong> À renseigner</p>
+        <p><strong>Contact :</strong> 99 87 16 66</p>
+        <p><a href="documents/lapin.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
+        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
+        <textarea placeholder="Pourquoi ce choix ?"></textarea>
+        <button>Envoyer</button><br><br>
+        <button onclick="showSection('formation')">⬅ Retour</button>
+    </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<div class="card">
-<h2>Contact</h2>
-<p>WhatsApp : <a href="https://wa.me/22899871666">99 87 16 66</a></p>
-</div>
+    <div class="box">
+        <h2>Contact</h2>
+        <p>Email : <strong>wealthychristian.com</strong></p>
+        <p>WhatsApp :
+        <a href="https://wa.me/22899871666" style="color:gold;">99 87 16 66</a>
+        </p>
+    </div>
 </section>
-
-<footer>
-© 2025 WEALTHY CHRISTIAN – La richesse pour la gloire de Dieu
-</footer>
 
 </body>
 </html>
