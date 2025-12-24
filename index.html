@@ -2,240 +2,204 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Wealthy Christian</title>
+<title>WEALTHY CHRISTIAN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
-body{
-    margin:0;
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background:#0b3c5d;
-    color:white;
+    background: #ffffff;
+    color: #003366;
+}
+h1, h2, h3 {
+    color: #003366;
 }
 
-/* HEADER */
-header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 30px;
-    background:#082f49;
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0b3c5d;
+    padding: 15px;
+}
+header .logo {
+    width: 60px;
+}
+header .title {
+    color: gold;
+    text-align: center;
+    flex-grow: 1;
+}
+nav a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+    background: #1e90ff;
+    padding: 10px 18px;
+    border-radius: 20px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
-header img{
-    height:55px;
+/* ===== SECTIONS ===== */
+section {
+    padding: 40px;
+}
+.cards a {
+    display: inline-block;
+    background: #1e90ff;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 25px;
+    text-decoration: none;
 }
 
-.site-title{
-    font-size:28px;
-    font-weight:bold;
-    color:gold;
-    text-shadow:1px 1px 4px #000;
+/* ===== FOOTER ===== */
+footer {
+    background: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
-nav a{
-    margin-left:15px;
-    padding:10px 15px;
-    background:#145da0;
-    border-radius:12px;
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    cursor:pointer;
+/* ===== WHATSAPP ===== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
 }
 
-nav a:hover{
-    background:gold;
-    color:#082f49;
+/* ===== FORMULAIRE ===== */
+form {
+    margin-top: 20px;
 }
-
-/* SECTIONS */
-section{
-    display:none;
-    padding:40px 20px;
-    max-width:1000px;
-    margin:auto;
+form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin: 10px 0;
 }
-
-.active{
-    display:block;
-}
-
-/* HERO IMAGE */
-.hero img{
-    width:100%;
-    border-radius:20px;
-    margin:30px 0;
-}
-
-/* BOX */
-.box{
-    background:#145da0;
-    padding:25px;
-    border-radius:20px;
-    margin-bottom:20px;
-}
-
-/* FORMATIONS */
-.card{
-    background:#1f6fb2;
-    padding:20px;
-    border-radius:18px;
-    margin:10px 0;
-    cursor:pointer;
-}
-
-.card:hover{
-    background:gold;
-    color:#082f49;
-}
-
-/* COMMENTS */
-textarea{
-    width:100%;
-    padding:10px;
-    border-radius:10px;
-    border:none;
-}
-
-button{
-    margin-top:10px;
-    padding:10px 20px;
-    border:none;
-    border-radius:12px;
-    background:gold;
-    font-weight:bold;
-    cursor:pointer;
+form button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
 }
 </style>
-
-<script>
-function showSection(id){
-    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
-}
-</script>
 </head>
-
 <body>
 
 <header>
-    <img src="images/logo.png" alt="Logo">
-    <div class="site-title">WEALTHY CHRISTIAN</div>
+    <img src="logo.png" class="logo" alt="Logo">
+    <h1 class="title">WEALTHY CHRISTIAN</h1>
     <nav>
-        <a onclick="showSection('accueil')">Accueil</a>
-        <a onclick="showSection('apropos')">À propos</a>
-        <a onclick="showSection('formation')">Formation</a>
-        <a onclick="showSection('contact')">Contact</a>
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#formation">Formation</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- ACCUEIL -->
-<section id="accueil" class="active">
-    <div class="box">
-        <h2>CONTEXTE ET JUSTIFICATION</h2>
-        <p>
-        De nombreux chrétiens vivent dans la pauvreté malgré leur foi.
-        Il est nécessaire de créer un cadre structuré pour former et accompagner
-        les chrétiens vers l’autonomie financière.
-        </p>
-    </div>
-
-    <div class="hero">
-        <img src="images/banniere.jpg" alt="Image principale">
-    </div>
+<section id="accueil">
+    <h2>VISION</h2>
+    <p>
+    De nombreux chrétiens vivent dans la pauvreté malgré leur foi. Plusieurs ignorent que la Bible regorge de principes puissants sur la gestion des biens, le travail, l'investissement et l'entrepreneuriat. Il est donc nécessaire de créer un cadre structuré où les chrétiens sont enseignés, formés et accompagnés dans la compréhension et la mise en œuvre de ces principes, afin de devenir financièrement autonomes et des instruments de bénédiction dans la société.
+    </p>
 </section>
 
-<!-- A PROPOS -->
 <section id="apropos">
-    <div class="box">
-        <h2>OBJECTIFS DE L’ASSOCIATION</h2>
-        <p><strong>Objectif général :</strong> Former des chrétiens financièrement autonomes.</p>
-        <ul>
-            <li>Principes bibliques</li>
-            <li>Entrepreneuriat</li>
-            <li>AGR</li>
-            <li>Investissement</li>
-            <li>Réseau chrétien</li>
-        </ul>
-    </div>
+    <h2>OBJECTIFS</h2>
+    <h3>Objectif général</h3>
+    <p>Former et accompagner les chrétiens à devenir financièrement prospères à travers des enseignements bibliques, des formations pratiques et des projets concrets.</p>
+    <h3>Objectifs spécifiques</h3>
+    <ul>
+        <li>Enseigner les principes bibliques sur la richesse, le travail, l'épargne et l’investissement.</li>
+        <li>Former les membres sur les AGR, l’entrepreneuriat, la gestion de projets et la finance personnelle.</li>
+        <li>Accompagner les membres dans la création et le développement de leurs projets générateurs de revenus.</li>
+        <li>Créer un réseau de soutien et de collaboration économique entre chrétiens.</li>
+        <li>Encourager l’investissement collectif et les partenariats d’affaires entre membres.</li>
+    </ul>
+    <h3>ACTIVITÉS PRÉVUES</h3>
+    <ul>
+        <li>Sessions d’enseignements bibliques sur la richesse et les finances.</li>
+        <li>Séminaires et ateliers sur l’entrepreneuriat chrétien, la gestion financière, le leadership économique.</li>
+        <li>Création de clubs d’investissement et de groupes d’épargne communautaires.</li>
+        <li>Coaching et accompagnement des projets des membres.</li>
+        <li>Organisation de conférences économiques chrétiennes et de forums d’affaires.</li>
+        <li>Mise en place d’un fonds d’appui aux AGR des membres.</li>
+        <li>Élaboration de programmes en ligne pour la formation à distance.</li>
+    </ul>
 </section>
 
-<!-- FORMATION -->
 <section id="formation">
-    <h2>Nos Formations</h2>
-    <div class="card" onclick="showSection('porc')">Élevage de porc</div>
-    <div class="card" onclick="showSection('pondeuse')">Élevage de volaille pondeuse</div>
-    <div class="card" onclick="showSection('caprin')">Élevage caprin</div>
-    <div class="card" onclick="showSection('lapin')">Élevage de lapin</div>
-</section>
-
-<!-- PORC -->
-<section id="porc">
-    <div class="box">
-        <h2>Formation : Élevage de Porc</h2>
-        <p><strong>Formateur :</strong> À renseigner</p>
-        <p><strong>Contact :</strong> 99 87 16 66</p>
-        <p><a href="documents/elevage-porc.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
-        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
-        <textarea placeholder="Pourquoi voulez-vous pratiquer ce type d’élevage ?"></textarea>
-        <button>Envoyer</button><br><br>
-        <button onclick="showSection('formation')">⬅ Retour</button>
+    <h2>FORMATIONS</h2>
+    <div class="cards">
+        <a href="#elevage">Élevage</a>
+        <a href="#entrepreneuriat">Entrepreneuriat</a>
+        <a href="#ecommerce">E-Commerce</a>
+        <a href="#edesign">E-Design</a>
     </div>
 </section>
 
-<!-- PONDEUSE -->
-<section id="pondeuse">
-    <div class="box">
-        <h2>Formation : Volaille pondeuse</h2>
-        <p><strong>Formateur :</strong> À renseigner</p>
-        <p><strong>Contact :</strong> 99 87 16 66</p>
-        <p><a href="documents/pondeuse.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
-        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
-        <textarea placeholder="Pourquoi voulez-vous pratiquer cet élevage ?"></textarea>
-        <button>Envoyer</button><br><br>
-        <button onclick="showSection('formation')">⬅ Retour</button>
-    </div>
+<section id="elevage">
+    <h3>Élevage de Porcs</h3>
+    <p><strong>Formateur :</strong> AZIABLE Kodjovi Charles</p>
+    <p><strong>Contact :</strong> +22899871666</p>
+    <a href="pdf/elevage-porc.pdf" download>Télécharger le PDF</a>
+    <form action="save_comment.php" method="POST">
+        <label>Pourquoi veux-tu faire ce domaine ?</label>
+        <textarea name="commentaire" required></textarea>
+        <input type="hidden" name="formation" value="Élevage de porcs">
+        <button type="submit">Envoyer</button>
+    </form>
 </section>
 
-<!-- CAPRIN -->
-<section id="caprin">
-    <div class="box">
-        <h2>Formation : Élevage caprin</h2>
-        <p><strong>Formateur :</strong> À renseigner</p>
-        <p><strong>Contact :</strong> 99 87 16 66</p>
-        <p><a href="documents/caprin.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
-        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
-        <textarea placeholder="Votre motivation"></textarea>
-        <button>Envoyer</button><br><br>
-        <button onclick="showSection('formation')">⬅ Retour</button>
-    </div>
-</section>
+<footer>
+    <p>La Richesse pour la Gloire de DIEU</p>
+</footer>
 
-<!-- LAPIN -->
-<section id="lapin">
-    <div class="box">
-        <h2>Formation : Élevage de lapin</h2>
-        <p><strong>Formateur :</strong> À renseigner</p>
-        <p><strong>Contact :</strong> 99 87 16 66</p>
-        <p><a href="documents/lapin.pdf" style="color:gold;" download>📄 Télécharger le PDF</a></p>
-        <p><a href="https://wa.me/22899871666" style="color:gold;">💬 WhatsApp du formateur</a></p>
-        <textarea placeholder="Pourquoi ce choix ?"></textarea>
-        <button>Envoyer</button><br><br>
-        <button onclick="showSection('formation')">⬅ Retour</button>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="box">
-        <h2>Contact</h2>
-        <p>Email : <strong>wealthychristian.com</strong></p>
-        <p>WhatsApp :
-        <a href="https://wa.me/22899871666" style="color:gold;">99 87 16 66</a>
-        </p>
-    </div>
-</section>
+<a href="https://wa.me/22899871666" class="whatsapp">💬</a>
 
 </body>
 </html>
+<?php
+// Connexion à la base de données
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wealthy_christian";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) { die("Connexion échouée: " . $conn->connect_error); }
+
+$formation = $_POST['formation'];
+$commentaire = $_POST['commentaire'];
+
+$stmt = $conn->prepare("INSERT INTO commentaires (formation, commentaire) VALUES (?, ?)");
+$stmt->bind_param("ss", $formation, $commentaire);
+$stmt->execute();
+
+echo "Message envoyé avec succès";
+$stmt->close();
+$conn->close();
+?>
+CREATE DATABASE wealthy_christian;
+
+USE wealthy_christian;
+
+CREATE TABLE commentaires (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    formation VARCHAR(100),
+    commentaire TEXT,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
