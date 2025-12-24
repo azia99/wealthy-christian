@@ -14,12 +14,11 @@ body{
 }
 header{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    padding:15px 20px;
+    align-items:center;
+    padding:15px;
     background:#072a4d;
 }
-header img{height:50px;}
 header h1{
     color:gold;
     border:2px solid gold;
@@ -27,14 +26,14 @@ header h1{
     border-radius:15px;
 }
 nav button{
-    margin-left:10px;
+    margin:5px;
     padding:10px 15px;
+    background:#0b5ed7;
     border:none;
     border-radius:12px;
-    cursor:pointer;
-    background:#0b5ed7;
     color:white;
     font-weight:bold;
+    cursor:pointer;
 }
 section{display:none;padding:25px;}
 .active{display:block;}
@@ -42,7 +41,6 @@ section{display:none;padding:25px;}
     background:#0e4c87;
     padding:20px;
     border-radius:15px;
-    margin-bottom:20px;
 }
 button.link{
     background:#198754;
@@ -55,7 +53,7 @@ button.link{
 }
 textarea{
     width:100%;
-    height:80px;
+    height:90px;
     border-radius:10px;
     padding:10px;
 }
@@ -78,11 +76,9 @@ function show(id){
 <body>
 
 <header>
-<img src="images/logo.png">
 <h1>WEALTHY CHRISTIAN</h1>
 <nav>
 <button onclick="show('accueil')">Accueil</button>
-<button onclick="show('apropos')">À propos</button>
 <button onclick="show('formation')">Formation</button>
 <button onclick="show('contact')">Contact</button>
 </nav>
@@ -90,30 +86,18 @@ function show(id){
 
 <section id="accueil" class="active">
 <div class="card">
-<h2>CONTEXTE ET JUSTIFICATION</h2>
+<h2>Bienvenue</h2>
 <p>Former des chrétiens financièrement autonomes selon les principes bibliques.</p>
-</div>
-</section>
-
-<section id="apropos">
-<div class="card">
-<h2>OBJECTIFS</h2>
-<ul>
-<li>Entrepreneuriat chrétien</li>
-<li>Investissement biblique</li>
-<li>Formation pratique</li>
-</ul>
 </div>
 </section>
 
 <section id="formation">
 <div class="card">
-<h2>Nos Formations</h2>
-<button class="link" onclick="show('elevage')">ÉLEVAGE</button>
-<button class="link" onclick="show('entrepreneuriat')">ENTREPRENEURIAT</button>
-<button class="link" onclick="show('investissement')">INVESTISSEMENT</button>
-<button class="link" onclick="show('ecommerce')">E-COMMERCE</button>
-<button class="link" onclick="show('design')">E-DESIGN</button>
+<h2>Formations</h2>
+<button class="link" onclick="show('entrepreneuriat')">Entrepreneuriat</button>
+<button class="link" onclick="show('investissement')">Investissement</button>
+<button class="link" onclick="show('ecommerce')">E-Commerce</button>
+<button class="link" onclick="show('design')">E-Design</button>
 </div>
 </section>
 
@@ -121,50 +105,66 @@ function show(id){
 <section id="entrepreneuriat">
 <div class="card">
 <h2>Entrepreneuriat</h2>
-<button class="link">Idées de business</button>
-<button class="link">Création d’entreprise</button>
-<button class="link">Gestion simplifiée</button>
-<button class="link">Leadership</button>
+<button class="link" onclick="show('idee_business')">Idées de business</button>
+<button class="link" onclick="show('creation_entreprise')">Création d’entreprise</button>
+<button class="link" onclick="show('gestion')">Gestion simplifiée</button>
+<button class="link" onclick="show('leadership')">Leadership</button>
 <button class="link" onclick="show('formation')">⬅ Retour</button>
 </div>
 </section>
 
-<!-- INVESTISSEMENT -->
-<section id="investissement">
+<!-- TEMPLATE FORMATION DETAILLEE -->
+<section id="idee_business">
 <div class="card">
-<h2>Investissement</h2>
-<button class="link">Investissement agricole</button>
-<button class="link">Épargne & tontine</button>
-<button class="link">Immobilier simplifié</button>
-<button class="link">Investissement collectif</button>
-<button class="link" onclick="show('formation')">⬅ Retour</button>
+<h3>Idées de business</h3>
+<p><b>Formateur :</b> Pasteur Kossi</p>
+<p><b>Contact :</b> 99 87 16 66</p>
+<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
+<p><a href="pdf/idees_business.pdf">📄 Télécharger PDF</a></p>
+<p><b>Pourquoi voulez-vous suivre cette formation ?</b></p>
+<textarea></textarea><br><br>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
 </div>
 </section>
 
-<!-- E-COMMERCE -->
-<section id="ecommerce">
+<section id="creation_entreprise">
 <div class="card">
-<h2>E-Commerce</h2>
-<button class="link">Vente Facebook & WhatsApp</button>
-<button class="link">Boutique en ligne</button>
-<button class="link">Paiement mobile</button>
-<button class="link">Livraison & clients</button>
-<button class="link" onclick="show('formation')">⬅ Retour</button>
+<h3>Création d’entreprise</h3>
+<p><b>Formateur :</b> M. Yao</p>
+<p><b>Contact :</b> 99 87 16 66</p>
+<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
+<p><a href="pdf/creation.pdf">📄 Télécharger PDF</a></p>
+<p><b>Votre motivation :</b></p>
+<textarea></textarea><br><br>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
 </div>
 </section>
 
-<!-- DESIGN -->
-<section id="design">
+<section id="gestion">
 <div class="card">
-<h2>E-Design</h2>
-<button class="link">Design graphique</button>
-<button class="link">Canva</button>
-<button class="link">Branding</button>
-<button class="link">Monétisation</button>
-<button class="link" onclick="show('formation')">⬅ Retour</button>
+<h3>Gestion simplifiée</h3>
+<p><b>Formateur :</b> Mme Akouvi</p>
+<p><b>Contact :</b> 99 87 16 66</p>
+<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
+<p><a href="pdf/gestion.pdf">📄 Télécharger PDF</a></p>
+<textarea></textarea><br><br>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
 </div>
 </section>
 
+<section id="leadership">
+<div class="card">
+<h3>Leadership</h3>
+<p><b>Formateur :</b> Pasteur John</p>
+<p><b>Contact :</b> 99 87 16 66</p>
+<p><a href="https://wa.me/22899871666">WhatsApp</a></p>
+<p><a href="pdf/leadership.pdf">📄 Télécharger PDF</a></p>
+<textarea></textarea><br><br>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <div class="card">
 <h2>Contact</h2>
