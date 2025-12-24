@@ -2,204 +2,240 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>WEALTHY CHRISTIAN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEALTHY CHRISTIAN</title>
 <style>
-/* ===== GENERAL ===== */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #ffffff;
-    color: #003366;
-}
-h1, h2, h3 {
-    color: #003366;
-}
-
-/* ===== HEADER ===== */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #0b3c5d;
-    padding: 15px;
-}
-header .logo {
-    width: 60px;
-}
-header .title {
-    color: gold;
-    text-align: center;
-    flex-grow: 1;
-}
-nav a {
-    color: white;
-    margin: 0 5px;
-    text-decoration: none;
-    background: #1e90ff;
-    padding: 10px 18px;
-    border-radius: 20px;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-}
-
-/* ===== SECTIONS ===== */
-section {
-    padding: 40px;
-}
-.cards a {
-    display: inline-block;
-    background: #1e90ff;
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 25px;
-    text-decoration: none;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background: #0b3c5d;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: green;
-    color: white;
-    font-size: 30px;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-}
-
-/* ===== FORMULAIRE ===== */
-form {
-    margin-top: 20px;
-}
-form textarea {
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    margin: 10px 0;
-}
-form button {
-    background: #1e90ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 10px;
-}
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f8ff;
+        color: #0b3c5d;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 30px;
+        background-color: #0b3c5d;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header h1 {
+        color: gold;
+        text-align: center;
+        flex-grow: 1;
+        margin: 0;
+        font-size: 28px;
+    }
+    nav {
+        display: flex;
+        gap: 15px;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        background-color: #1b6ca8;
+    }
+    .container {
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    h2 {
+        color: #0b3c5d;
+        border-bottom: 2px solid #0b3c5d;
+        padding-bottom: 5px;
+    }
+    .section {
+        margin-bottom: 50px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    ul {
+        padding-left: 20px;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    .submenu {
+        margin-left: 20px;
+        list-style-type: circle;
+    }
+    .comment-section {
+        margin-top: 15px;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 15px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #0b3c5d;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #1b6ca8;
+    }
+    .whatsapp {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25D366;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #0b3c5d;
+        color: white;
+        margin-top: 50px;
+    }
 </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" class="logo" alt="Logo">
-    <h1 class="title">WEALTHY CHRISTIAN</h1>
+    <img src="logo.png" alt="Logo" style="height:50px;">
+    <h1>WEALTHY CHRISTIAN</h1>
     <nav>
         <a href="#accueil">Accueil</a>
-        <a href="#apropos">À propos</a>
+        <a href="#apropos">A propos</a>
         <a href="#formation">Formation</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<section id="accueil">
-    <h2>VISION</h2>
-    <p>
-    De nombreux chrétiens vivent dans la pauvreté malgré leur foi. Plusieurs ignorent que la Bible regorge de principes puissants sur la gestion des biens, le travail, l'investissement et l'entrepreneuriat. Il est donc nécessaire de créer un cadre structuré où les chrétiens sont enseignés, formés et accompagnés dans la compréhension et la mise en œuvre de ces principes, afin de devenir financièrement autonomes et des instruments de bénédiction dans la société.
-    </p>
-</section>
-
-<section id="apropos">
-    <h2>OBJECTIFS</h2>
-    <h3>Objectif général</h3>
-    <p>Former et accompagner les chrétiens à devenir financièrement prospères à travers des enseignements bibliques, des formations pratiques et des projets concrets.</p>
-    <h3>Objectifs spécifiques</h3>
-    <ul>
-        <li>Enseigner les principes bibliques sur la richesse, le travail, l'épargne et l’investissement.</li>
-        <li>Former les membres sur les AGR, l’entrepreneuriat, la gestion de projets et la finance personnelle.</li>
-        <li>Accompagner les membres dans la création et le développement de leurs projets générateurs de revenus.</li>
-        <li>Créer un réseau de soutien et de collaboration économique entre chrétiens.</li>
-        <li>Encourager l’investissement collectif et les partenariats d’affaires entre membres.</li>
-    </ul>
-    <h3>ACTIVITÉS PRÉVUES</h3>
-    <ul>
-        <li>Sessions d’enseignements bibliques sur la richesse et les finances.</li>
-        <li>Séminaires et ateliers sur l’entrepreneuriat chrétien, la gestion financière, le leadership économique.</li>
-        <li>Création de clubs d’investissement et de groupes d’épargne communautaires.</li>
-        <li>Coaching et accompagnement des projets des membres.</li>
-        <li>Organisation de conférences économiques chrétiennes et de forums d’affaires.</li>
-        <li>Mise en place d’un fonds d’appui aux AGR des membres.</li>
-        <li>Élaboration de programmes en ligne pour la formation à distance.</li>
-    </ul>
-</section>
-
-<section id="formation">
-    <h2>FORMATIONS</h2>
-    <div class="cards">
-        <a href="#elevage">Élevage</a>
-        <a href="#entrepreneuriat">Entrepreneuriat</a>
-        <a href="#ecommerce">E-Commerce</a>
-        <a href="#edesign">E-Design</a>
+<div class="container" id="accueil">
+    <div class="section">
+        <h2>VISION</h2>
+        <p>De nombreux chrétiens vivent dans la pauvreté malgré leur foi. Plusieurs ignorent que la Bible regorge de principes puissants sur la gestion des biens, le travail, l’investissement et l'entrepreneuriat. Il est donc nécessaire de créer un cadre structuré où les chrétiens sont enseignés, formés et accompagnés dans la compréhension et la mise en œuvre de ces principes, afin de devenir financièrement autonomes et des instruments de bénédiction dans la société.</p>
     </div>
-</section>
+</div>
 
-<section id="elevage">
-    <h3>Élevage de Porcs</h3>
-    <p><strong>Formateur :</strong> AZIABLE Kodjovi Charles</p>
-    <p><strong>Contact :</strong> +22899871666</p>
-    <a href="pdf/elevage-porc.pdf" download>Télécharger le PDF</a>
-    <form action="save_comment.php" method="POST">
-        <label>Pourquoi veux-tu faire ce domaine ?</label>
-        <textarea name="commentaire" required></textarea>
-        <input type="hidden" name="formation" value="Élevage de porcs">
-        <button type="submit">Envoyer</button>
-    </form>
-</section>
+<div class="container" id="apropos">
+    <div class="section">
+        <h2>OBJECTIFS</h2>
+        <h3>Objectif général</h3>
+        <p>Former et accompagner les chrétiens à devenir financièrement prospères à travers des enseignements bibliques, des formations pratiques et des projets concrets.</p>
+        <h3>Objectifs spécifiques</h3>
+        <ul>
+            <li>Enseigner les principes bibliques sur la richesse, le travail, l'épargne et l’investissement.</li>
+            <li>Former les membres sur les AGR, l’entrepreneuriat, la gestion de projets et la finance personnelle.</li>
+            <li>Accompagner les membres dans la création et le développement de leurs projets générateurs de revenus.</li>
+            <li>Créer un réseau de soutien et de collaboration économique entre chrétiens.</li>
+            <li>Encourager l’investissement collectif et les partenariats d’affaires entre membres.</li>
+        </ul>
+        <h3>ACTIVITÉS PRÉVUES</h3>
+        <ul>
+            <li>Sessions d’enseignements bibliques sur la richesse et les finances.</li>
+            <li>Séminaires et ateliers sur l’entrepreneuriat chrétien, la gestion financière, le leadership économique.</li>
+            <li>Création de clubs d’investissement et de groupes d’épargne communautaires.</li>
+            <li>Coaching et accompagnement des projets des membres.</li>
+            <li>Organisation de conférences économiques chrétiennes et de forums d’affaires.</li>
+            <li>Mise en place d’un fonds d’appui aux AGR des membres.</li>
+            <li>Élaboration de programmes en ligne pour la formation à distance.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container" id="formation">
+    <div class="section">
+        <h2>FORMATION</h2>
+        <ul>
+            <li>Élevage
+                <ul class="submenu">
+                    <li>Élevage de porcs <a href="#eleve-porc">Voir plus</a></li>
+                    <li>Élevage de lapin <a href="#eleve-lapin">Voir plus</a></li>
+                    <li>Élevage de poulets pondeuses et poulets de chair <a href="#eleve-poulet">Voir plus</a></li>
+                    <li>Élevage de caprin <a href="#eleve-caprin">Voir plus</a></li>
+                    <li>Élevage de poisson <a href="#eleve-poisson">Voir plus</a></li>
+                    <li>Élevage de poulets locaux <a href="#eleve-pouletlocaux">Voir plus</a></li>
+                </ul>
+            </li>
+            <li>Entrepreneuriat
+                <ul class="submenu">
+                    <li>Idées de business chrétiens <a href="#business">Voir plus</a></li>
+                    <li>Création de micro-entreprise <a href="#micro">Voir plus</a></li>
+                    <li>Gestion & comptabilité simplifiée <a href="#gestion">Voir plus</a></li>
+                    <li>Leadership & mentalité entrepreneuriale <a href="#leadership">Voir plus</a></li>
+                </ul>
+            </li>
+            <li>E-Commerce
+                <ul class="submenu">
+                    <li>Vente sur Facebook & WhatsApp <a href="#facebook">Voir plus</a></li>
+                    <li>Boutique en ligne simple <a href="#boutique">Voir plus</a></li>
+                    <li>Formation sur ALIBABA, Amazon <a href="#amazon">Voir plus</a></li>
+                </ul>
+            </li>
+            <li>E-Design
+                <ul class="submenu">
+                    <li>Design graphique avec Photoshop <a href="#photoshop">Voir plus</a></li>
+                    <li>Design avec Canva <a href="#canva">Voir plus</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Exemple sous-onglet formation : Élevage de porcs -->
+<div class="container" id="eleve-porc">
+    <div class="section">
+        <h2>Élevage de porcs</h2>
+        <p><strong>Formateur :</strong> Jean Dupont</p>
+        <p><strong>Contact :</strong> +228 90000000</p>
+        <a href="fichier.pdf" download><button>Télécharger PDF</button></a>
+        <div class="comment-section">
+            <h3>Pourquoi veux-tu faire ce domaine ?</h3>
+            <textarea id="comment-porc" placeholder="Écris ta réponse ici..."></textarea>
+            <button onclick="saveComment('comment-porc')">Envoyer</button>
+        </div>
+    </div>
+</div>
+
+<!-- Autres sous-onglets peuvent être dupliqués et adaptés comme ci-dessus -->
+
+<a href="https://wa.me/22899871666" class="whatsapp" target="_blank">WhatsApp</a>
 
 <footer>
     <p>La Richesse pour la Gloire de DIEU</p>
+    <p>All rights reserved 2025</p>
 </footer>
 
-<a href="https://wa.me/22899871666" class="whatsapp">💬</a>
+<script>
+function saveComment(id){
+    const comment = document.getElementById(id).value;
+    if(comment){
+        alert("Merci pour votre réponse :\n" + comment);
+        // Ici vous pouvez ajouter la logique pour sauvegarder la réponse dans une base de données
+        document.getElementById(id).value = '';
+    } else {
+        alert("Veuillez écrire votre réponse avant d'envoyer.");
+    }
+}
+</script>
 
 </body>
 </html>
-<?php
-// Connexion à la base de données
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "wealthy_christian";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) { die("Connexion échouée: " . $conn->connect_error); }
-
-$formation = $_POST['formation'];
-$commentaire = $_POST['commentaire'];
-
-$stmt = $conn->prepare("INSERT INTO commentaires (formation, commentaire) VALUES (?, ?)");
-$stmt->bind_param("ss", $formation, $commentaire);
-$stmt->execute();
-
-echo "Message envoyé avec succès";
-$stmt->close();
-$conn->close();
-?>
-CREATE DATABASE wealthy_christian;
-
-USE wealthy_christian;
-
-CREATE TABLE commentaires (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    formation VARCHAR(100),
-    commentaire TEXT,
-    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
