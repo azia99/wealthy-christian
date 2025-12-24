@@ -51,7 +51,7 @@ button.link{
     border-radius:12px;
     color:white;
     cursor:pointer;
-    margin:8px 0;
+    margin:5px;
 }
 textarea{
     width:100%;
@@ -59,7 +59,7 @@ textarea{
     border-radius:10px;
     padding:10px;
 }
-a{color:gold;text-decoration:none;font-weight:bold;}
+a{color:gold;text-decoration:none;}
 footer{
     background:#072a4d;
     padding:20px;
@@ -78,35 +78,30 @@ function show(id){
 <body>
 
 <header>
-    <img src="images/logo.png">
-    <h1>WEALTHYCHRISTIAN</h1>
-    <nav>
-        <button onclick="show('accueil')">Accueil</button>
-        <button onclick="show('apropos')">À propos</button>
-        <button onclick="show('formation')">Formation</button>
-        <button onclick="show('contact')">Contact</button>
-    </nav>
+<img src="images/logo.png">
+<h1>WEALTHY CHRISTIAN</h1>
+<nav>
+<button onclick="show('accueil')">Accueil</button>
+<button onclick="show('apropos')">À propos</button>
+<button onclick="show('formation')">Formation</button>
+<button onclick="show('contact')">Contact</button>
+</nav>
 </header>
 
 <section id="accueil" class="active">
 <div class="card">
 <h2>CONTEXTE ET JUSTIFICATION</h2>
-<p>
-De nombreux chrétiens vivent dans la pauvreté malgré leur foi.
-Il est nécessaire de créer un cadre structuré pour former et accompagner les chrétiens vers l’autonomie financière.
-</p>
+<p>Former des chrétiens financièrement autonomes selon les principes bibliques.</p>
 </div>
 </section>
 
 <section id="apropos">
 <div class="card">
-<h2>OBJECTIFS DE L’ASSOCIATION</h2>
+<h2>OBJECTIFS</h2>
 <ul>
-<li>Principes bibliques de richesse</li>
-<li>Entrepreneuriat et AGR</li>
-<li>Accompagnement des projets</li>
-<li>Réseau économique chrétien</li>
-<li>Investissement collectif</li>
+<li>Entrepreneuriat chrétien</li>
+<li>Investissement biblique</li>
+<li>Formation pratique</li>
 </ul>
 </div>
 </section>
@@ -116,74 +111,63 @@ Il est nécessaire de créer un cadre structuré pour former et accompagner les 
 <h2>Nos Formations</h2>
 <button class="link" onclick="show('elevage')">ÉLEVAGE</button>
 <button class="link" onclick="show('entrepreneuriat')">ENTREPRENEURIAT</button>
-<button class="link">INVESTISSEMENT</button>
-<button class="link">E-COMMERCE</button>
-<button class="link">E-DESIGN</button>
+<button class="link" onclick="show('investissement')">INVESTISSEMENT</button>
+<button class="link" onclick="show('ecommerce')">E-COMMERCE</button>
+<button class="link" onclick="show('design')">E-DESIGN</button>
 </div>
 </section>
 
+<!-- ENTREPRENEURIAT -->
 <section id="entrepreneuriat">
 <div class="card">
 <h2>Entrepreneuriat</h2>
-<button class="link" onclick="show('creation')">Création d’entreprise</button>
-<button class="link" onclick="show('gestion')">Gestion & Leadership</button>
-<button class="link" onclick="show('agr')">AGR</button>
-<button class="link" onclick="show('developpement')">Développement & Expansion</button>
+<button class="link">Idées de business</button>
+<button class="link">Création d’entreprise</button>
+<button class="link">Gestion simplifiée</button>
+<button class="link">Leadership</button>
 <button class="link" onclick="show('formation')">⬅ Retour</button>
 </div>
 </section>
 
-<!-- TEMPLATE ENTREPRENEURIAT -->
-<section id="creation">
+<!-- INVESTISSEMENT -->
+<section id="investissement">
 <div class="card">
-<h3>Création d’Entreprise</h3>
-<p><b>Formateur :</b> M. Kodjo</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<p><a href="#">📄 Télécharger le PDF</a></p>
-<p><b>Pourquoi voulez-vous entreprendre ?</b></p>
-<textarea></textarea>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
+<h2>Investissement</h2>
+<button class="link">Investissement agricole</button>
+<button class="link">Épargne & tontine</button>
+<button class="link">Immobilier simplifié</button>
+<button class="link">Investissement collectif</button>
+<button class="link" onclick="show('formation')">⬅ Retour</button>
 </div>
 </section>
 
-<section id="gestion">
+<!-- E-COMMERCE -->
+<section id="ecommerce">
 <div class="card">
-<h3>Gestion & Leadership</h3>
-<p><b>Formateur :</b> Mme Ama</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<textarea></textarea>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
+<h2>E-Commerce</h2>
+<button class="link">Vente Facebook & WhatsApp</button>
+<button class="link">Boutique en ligne</button>
+<button class="link">Paiement mobile</button>
+<button class="link">Livraison & clients</button>
+<button class="link" onclick="show('formation')">⬅ Retour</button>
 </div>
 </section>
 
-<section id="agr">
+<!-- DESIGN -->
+<section id="design">
 <div class="card">
-<h3>AGR – Activités Génératrices de Revenus</h3>
-<p><b>Formateur :</b> M. Yao</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<textarea></textarea>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
-</div>
-</section>
-
-<section id="developpement">
-<div class="card">
-<h3>Développement & Expansion</h3>
-<p><b>Formateur :</b> Mme Akou</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<textarea></textarea>
-<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
+<h2>E-Design</h2>
+<button class="link">Design graphique</button>
+<button class="link">Canva</button>
+<button class="link">Branding</button>
+<button class="link">Monétisation</button>
+<button class="link" onclick="show('formation')">⬅ Retour</button>
 </div>
 </section>
 
 <section id="contact">
 <div class="card">
 <h2>Contact</h2>
-<p>Email : contact@wealthychristian.com</p>
 <p>WhatsApp : <a href="https://wa.me/22899871666">99 87 16 66</a></p>
 </div>
 </section>
