@@ -19,15 +19,12 @@ header{
     padding:15px 20px;
     background:#072a4d;
 }
-header img{
-    height:50px;
-}
+header img{height:50px;}
 header h1{
     color:gold;
     border:2px solid gold;
     padding:8px 20px;
     border-radius:15px;
-    font-weight:bold;
 }
 nav button{
     margin-left:10px;
@@ -39,13 +36,8 @@ nav button{
     color:white;
     font-weight:bold;
 }
-section{
-    display:none;
-    padding:25px;
-}
-.active{
-    display:block;
-}
+section{display:none;padding:25px;}
+.active{display:block;}
 .card{
     background:#0e4c87;
     padding:20px;
@@ -59,7 +51,7 @@ button.link{
     border-radius:12px;
     color:white;
     cursor:pointer;
-    margin-top:10px;
+    margin:8px 0;
 }
 textarea{
     width:100%;
@@ -67,11 +59,7 @@ textarea{
     border-radius:10px;
     padding:10px;
 }
-a{
-    color:gold;
-    text-decoration:none;
-    font-weight:bold;
-}
+a{color:gold;text-decoration:none;font-weight:bold;}
 footer{
     background:#072a4d;
     padding:20px;
@@ -90,7 +78,7 @@ function show(id){
 <body>
 
 <header>
-    <img src="images/logo.png" alt="logo">
+    <img src="images/logo.png">
     <h1>WEALTHYCHRISTIAN</h1>
     <nav>
         <button onclick="show('accueil')">Accueil</button>
@@ -104,8 +92,8 @@ function show(id){
 <div class="card">
 <h2>CONTEXTE ET JUSTIFICATION</h2>
 <p>
-De nombreux chrétiens vivent dans la pauvreté malgré leur foi. Plusieurs ignorent que la Bible regorge de principes puissants sur la gestion des biens, le travail, l’investissement et l'entrepreneuriat.
-Il est donc nécessaire de créer un cadre structuré où les chrétiens sont enseignés, formés et accompagnés afin de devenir financièrement autonomes et des instruments de bénédiction dans la société.
+De nombreux chrétiens vivent dans la pauvreté malgré leur foi.
+Il est nécessaire de créer un cadre structuré pour former et accompagner les chrétiens vers l’autonomie financière.
 </p>
 </div>
 </section>
@@ -113,14 +101,10 @@ Il est donc nécessaire de créer un cadre structuré où les chrétiens sont en
 <section id="apropos">
 <div class="card">
 <h2>OBJECTIFS DE L’ASSOCIATION</h2>
-<p><b>Objectif général :</b><br>
-Former et accompagner les chrétiens à devenir financièrement prospères.</p>
-
-<p><b>Objectifs spécifiques :</b></p>
 <ul>
-<li>Principes bibliques sur la richesse</li>
-<li>AGR et entrepreneuriat</li>
-<li>Accompagnement de projets</li>
+<li>Principes bibliques de richesse</li>
+<li>Entrepreneuriat et AGR</li>
+<li>Accompagnement des projets</li>
 <li>Réseau économique chrétien</li>
 <li>Investissement collectif</li>
 </ul>
@@ -131,78 +115,68 @@ Former et accompagner les chrétiens à devenir financièrement prospères.</p>
 <div class="card">
 <h2>Nos Formations</h2>
 <button class="link" onclick="show('elevage')">ÉLEVAGE</button>
-<button class="link">ENTREPRENEURIAT</button>
+<button class="link" onclick="show('entrepreneuriat')">ENTREPRENEURIAT</button>
 <button class="link">INVESTISSEMENT</button>
 <button class="link">E-COMMERCE</button>
 <button class="link">E-DESIGN</button>
 </div>
 </section>
 
-<section id="elevage">
+<section id="entrepreneuriat">
 <div class="card">
-<h2>Formations en Élevage</h2>
-<button class="link" onclick="show('porc')">Élevage de Porc</button>
-<button class="link" onclick="show('pondeuse')">Pondeuses</button>
-<button class="link" onclick="show('caprin')">Caprin</button>
-<button class="link" onclick="show('lapin')">Lapin</button>
+<h2>Entrepreneuriat</h2>
+<button class="link" onclick="show('creation')">Création d’entreprise</button>
+<button class="link" onclick="show('gestion')">Gestion & Leadership</button>
+<button class="link" onclick="show('agr')">AGR</button>
+<button class="link" onclick="show('developpement')">Développement & Expansion</button>
 <button class="link" onclick="show('formation')">⬅ Retour</button>
 </div>
 </section>
 
-<!-- TEMPLATE FORMATION -->
-<section id="porc">
+<!-- TEMPLATE ENTREPRENEURIAT -->
+<section id="creation">
 <div class="card">
-<h3>Élevage de Porc</h3>
-<p><b>Formateur :</b> M. Kossi Doe</p>
+<h3>Création d’Entreprise</h3>
+<p><b>Formateur :</b> M. Kodjo</p>
 <p><b>Contact :</b> 99 87 16 66</p>
 <p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<p><a href="pdf/porc.pdf">📄 Télécharger le PDF</a></p>
-<p><b>Pourquoi voulez-vous pratiquer ce type d'élevage ?</b></p>
-<textarea placeholder="Votre commentaire ou question..."></textarea>
-<br><br>
-<button class="link" onclick="show('elevage')">⬅ Retour</button>
-</div>
-</section>
-
-<section id="pondeuse">
-<div class="card">
-<h3>Élevage de Pondeuses</h3>
-<p><b>Formateur :</b> Mme Akouvi</p>
-<p><b>Contact :</b> 99 87 16 66</p>
-<p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<p><a href="pdf/pondeuse.pdf">📄 Télécharger le PDF</a></p>
-<p><b>Pourquoi voulez-vous pratiquer ce type d'élevage ?</b></p>
+<p><a href="#">📄 Télécharger le PDF</a></p>
+<p><b>Pourquoi voulez-vous entreprendre ?</b></p>
 <textarea></textarea>
-<br><br>
-<button class="link" onclick="show('elevage')">⬅ Retour</button>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
 </div>
 </section>
 
-<section id="caprin">
+<section id="gestion">
 <div class="card">
-<h3>Élevage Caprin</h3>
+<h3>Gestion & Leadership</h3>
+<p><b>Formateur :</b> Mme Ama</p>
+<p><b>Contact :</b> 99 87 16 66</p>
+<p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
+<textarea></textarea>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
+</div>
+</section>
+
+<section id="agr">
+<div class="card">
+<h3>AGR – Activités Génératrices de Revenus</h3>
 <p><b>Formateur :</b> M. Yao</p>
 <p><b>Contact :</b> 99 87 16 66</p>
 <p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<p><a href="pdf/caprin.pdf">📄 Télécharger le PDF</a></p>
-<p><b>Pourquoi voulez-vous pratiquer ce type d'élevage ?</b></p>
 <textarea></textarea>
-<br><br>
-<button class="link" onclick="show('elevage')">⬅ Retour</button>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
 </div>
 </section>
 
-<section id="lapin">
+<section id="developpement">
 <div class="card">
-<h3>Élevage de Lapin</h3>
-<p><b>Formateur :</b> Mme Dede</p>
+<h3>Développement & Expansion</h3>
+<p><b>Formateur :</b> Mme Akou</p>
 <p><b>Contact :</b> 99 87 16 66</p>
 <p><a href="https://wa.me/22899871666">WhatsApp direct</a></p>
-<p><a href="pdf/lapin.pdf">📄 Télécharger le PDF</a></p>
-<p><b>Pourquoi voulez-vous pratiquer ce type d'élevage ?</b></p>
 <textarea></textarea>
-<br><br>
-<button class="link" onclick="show('elevage')">⬅ Retour</button>
+<button class="link" onclick="show('entrepreneuriat')">⬅ Retour</button>
 </div>
 </section>
 
